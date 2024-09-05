@@ -9,12 +9,14 @@ function check_enter(){
 }
 count=0;
 function signed(){
-    if(count===0){
-        document.querySelector(".signinbutton").innerHTML="Hello,sai mukesh";
+    if(count%2===0){
+        const html='<button class="js-button">Sign in</button>';
+        document.querySelector(".js-signin")
+        .innerHTML=html;
         count++;
     }
     else{
-        document.querySelector(".signinbutton").innerHTML="Already signed ijjllajsdjdg j  fjioj  fjioidj  n";
-        count=0;
+        document.querySelector(".js-signin").innerHTML="";
+        count++;
     }
 }
