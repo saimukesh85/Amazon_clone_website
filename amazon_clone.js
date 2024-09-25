@@ -3,7 +3,7 @@ function printsearch(){
     document.querySelector(".searchbar").value="";
 }
 function check_enter(){
-    if(event.key=="Enter"){
+    if(event.key==="Enter"){
         printsearch();
     }
 }

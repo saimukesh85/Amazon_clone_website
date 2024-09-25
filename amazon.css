@@ -64,7 +64,9 @@ body{
     
     
 }
-.js-button:
+.cart-count{
+    color: white;
+}
 .js-button{
     background-color: rgb(255, 217, 0);
     border: none;
