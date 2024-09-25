@@ -20,3 +20,19 @@ function signed(){
         count++;
     }
 }
+let decarativeproduct=[1,2,3,4,5,6,7]
+let secondhtml="";
+decarativeproduct.forEach((item)=>{
+    secondhtml +=`<div><button class="second-row-product-img"><img src="photos/d${item}.jpg"></button></div>`
+}
+)
+document.querySelector('.second-row-of-items').innerHTML=secondhtml;
+/* --------------code for second page--------------------*/
+const pro_details=[
+    img1={id:img1,
+    img:photos/d1.jpg,
+    name: tree,
+    price: 102
+    }
+
+]
