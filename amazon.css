@@ -91,6 +91,24 @@ body{
     border-width: 1px;
     
 }
+.add-to-cart-button{
+    background-color: #ffd816;
+    border: none;
+    margin-left: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 20px;
+    
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+
+}
+.add-to-cart-button:hover{
+    background-color: #f3ce17;
+}
 .location:hover{
     border-color: white;
     border-style: solid;
@@ -342,6 +360,7 @@ height: 40px;
     z-index: 80;
     padding: 0;
     margin: 0;
+    height: 190px;
 }
 .add{
     border-bottom: 9cap;
