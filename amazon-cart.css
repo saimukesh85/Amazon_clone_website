@@ -8,6 +8,66 @@
     font-weight: bolder;
     padding-bottom: 20px;
 }
-.main-body{
-    background-color: red;
+.maincart{
+    background-color: white;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right:400px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    
+}
+.js-mainbody{
+    background-color: lightblue;
+}
+.cart-img{
+    margin-top: 20px;
+    margin-left: 30px;
+    size: 200px;
+    width: 180px;
+    aspect-ratio: auto 180 / 180;
+    height: 180px;
+    margin-bottom: 30px;
+}
+.pro-det{
+    margin: 20px;
+}
+.pro-name{
+     
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 18px;
+    
+}
+.stock-button{
+    color: #007600;
+    margin-top: 10px;
+}
+.elig-button{
+    margin-top: 5px;
+    font-size: 14px;
+    color: #565959;
+}
+.price-text{
+    display: flex;
+    flex-direction: row;
+    margin-top: 8px;
+}
+.quen-button-div{
+    margin-top: 10px;
+}
+.qty-button{
+   border-radius: 6px;
+   border-width: 1px;
+   padding: 5px 26px 5px 11px;
+   border-color: #dbe0e0;
+   box-shadow: none;
+}
+.qty-button:hover{
+    background-color: rgb(224, 223, 223);
+}
+body{
+    background-color: #eaeded;
 }
