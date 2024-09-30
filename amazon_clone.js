@@ -113,24 +113,57 @@ function signed(){
 
 let firsthtml="";
 Object.values(pro_details1).forEach((item)=>{
-    firsthtml+=`<div><img class="im" src="${item.img}"><button class="add-to-cart-button" data-product-id="${item.id}" onclick="addtocart();">Add to Cart</button></div>`
+    firsthtml+=`<div><img class="im" src="${item.img}"><button class="add-to-cart-button" data-product-id="${item.id}" >Add to Cart</button></div>`
 })
 document.querySelector(".products").innerHTML=firsthtml;
 
 let secondhtml="";
 Object.values(pro_details2).forEach((item)=>{
-    secondhtml +=`<div><button class="second-row-product-img"><img src="${item.img}"></button><button class="add-to-cart-button" data-product-id="${item.id}" onclick="addtocart();">Add to Cart</button></div>`
+    secondhtml +=`<div><button class="second-row-product-img"><img src="${item.img}"></button><button class="add-to-cart-button" data-product-id="${item.id}">Add to Cart</button></div>`
 }
 )
 document.querySelector('.second-row-of-items').innerHTML=secondhtml;
 document.querySelector(".cart-count-num").innerHTML=0;
 let cart_count=1;
-function addtocart(){
-    document.querySelector(".cart-count-num").innerHTML=cart_count;
-    cart_count++;
-};
-let cart_items=[];
-const addcart=document.querySelectorAll('.add-to-cart-button');
+
+const addcartbuttons=document.querySelectorAll('.add-to-cart-button');
+addcartbuttons.forEach(button=>{
+    button.addEventListener('click',()=>{
+        document.querySelector('.cart-count-num').innerHTML=cart_count;
+        cart_count++;
+    })
+})
+let cart_items="";
+addcartbuttons.forEach(item=>{
+    item.addEventListener('click',()=>{
+        const det=item.dataset.productId;
+        Object.values(pro_details1).forEach(prod=>{
+            if(prod.id===det){
+                cart_items +=`<div class="maincart">
+        <div class="img1">
+       
+            <img class="cart-img" src="${prod.img}">
+        </div>
+        <div class="pro-det">
+            <div class="pro-name">${prod.name}
+
+        </div>
+        <div class="stock-button">In stock</div>
+        <div class="elig-button">Eligible for FREE Shipping</div>
+        <div class="price-text">
+            <div style="font-weight: bolder; font-size: 20px;">Price:</div>
+            <div style="font-size: 17px;margin-left: 7px; font-weight: bold;color: #b12704; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">&#8377;${prod.price}</div>
+        </div>
+        <div class="quen-button-div"><button class="qty-button">Qty: 1</button></div>
+    </div>
+    </div>`
+            }
+        })
+        
+    })
+})
+localStorage.setItem("sharedlist",JSON.stringify(cart_items));
+/*const addcart=document.querySelectorAll('.add-to-cart-button');
 addcart.forEach(button=>{
     button.addEventListener('click',()=>{
         let link=button.dataset.productId;
@@ -142,25 +175,11 @@ addcart.forEach(button=>{
         
     })
     
+})*/
+
+document.querySelector('.cart-div').addEventListener('click',()=>{
+    console.log(cart_items)
 })
-addcart.forEach(button=>{
-    button.addEventListener('click',()=>{
-        let link=button.dataset.productId;
-        Object.values(pro_details2).forEach(pro=>{
-            if(pro.id === link){
-                cart_items.push(pro)
-            }
-        })
-    })
-    
-    
-})
+
 
 /* --------------code for second page--------------------*/
-
-    
-    
-
-    
-
-
