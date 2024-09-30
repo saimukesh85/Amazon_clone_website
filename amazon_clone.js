@@ -97,7 +97,7 @@ function check_enter(){
         printsearch();
     }
 }
-count=0;
+let count=0;
 function signed(){
     if(count%2===0){
         const html='<button class="js-button">Sign in</button>';
@@ -133,7 +133,7 @@ addcartbuttons.forEach(button=>{
         cart_count++;
     })
 })
-let cart_items="";
+export let cart_items="";
 addcartbuttons.forEach(item=>{
     item.addEventListener('click',()=>{
         const det=item.dataset.productId;
@@ -162,7 +162,7 @@ addcartbuttons.forEach(item=>{
         
     })
 })
-localStorage.setItem("sharedlist",JSON.stringify(cart_items));
+
 /*const addcart=document.querySelectorAll('.add-to-cart-button');
 addcart.forEach(button=>{
     button.addEventListener('click',()=>{
@@ -177,9 +177,6 @@ addcart.forEach(button=>{
     
 })*/
 
-document.querySelector('.cart-div').addEventListener('click',()=>{
-    console.log(cart_items)
-})
 
 
 /* --------------code for second page--------------------*/
