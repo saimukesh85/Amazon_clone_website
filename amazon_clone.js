@@ -133,7 +133,7 @@ addcartbuttons.forEach(button=>{
         cart_count++;
     })
 })
-export let cart_items="";
+let cart_items="";
 addcartbuttons.forEach(item=>{
     item.addEventListener('click',()=>{
         const det=item.dataset.productId;
@@ -177,6 +177,8 @@ addcart.forEach(button=>{
     
 })*/
 
-
+document.querySelector('.signin').addEventListener('click',()=>{
+    console.log(cart_items)
+})
 
 /* --------------code for second page--------------------*/
