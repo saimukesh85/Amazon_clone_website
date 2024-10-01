@@ -1,5 +1,4 @@
-
-
+export const f=7;
 document.querySelector('.js-product-list').innerHTML=`<div class="maincart">
         <div class="img1">
        

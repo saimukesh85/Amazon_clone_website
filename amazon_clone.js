@@ -1,3 +1,5 @@
+//import { f as t} from './amazon_cart.js';
+
 const pro_details1=[
     {id:"img8",
     img:"photos/d8.jpg",
