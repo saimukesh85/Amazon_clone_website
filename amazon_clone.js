@@ -45,7 +45,7 @@ const pro_details1=[
     
 
 ]
-const pro_details2={
+export const pro_details2={
     img1:{id:"img1",
     img:"photos/d1.jpg",
     name:"Apple iPhone 13 (128GB) - Starlight",
