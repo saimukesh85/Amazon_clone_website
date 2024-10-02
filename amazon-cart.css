@@ -92,12 +92,50 @@
     margin-top: 50px;
     width: 500px;
     margin-left: 40px;
-    max-height: 250px;
+    max-height: 200px;
 }
 .js-product-list{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+.elig-for-free-del{
+    background-color: #067d62;color: #067d62;margin: 20px;border-radius: 20px;
+}
+.eligible-for-free-delivery-text{
+    display: flex;
+    justify-content: center;
+   
+    margin-top:-18px ;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight:600;
+    color: #067d62;
+}
+.subtotal-text{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.gift-text{
+    display: flex;
+    justify-content: center;
+    margin-top: -10px;
+}
+.proceed-to-pay-button{
+   margin-left: 60px;
+   margin-top: 15px;
+   background-color: #ffd500;
+   border: none;
+   padding: 8px 60px 8px 60px;
+   border-radius: 20px;
+   font-weight: 60;
+    
+}
+.proceed-to-pay-button:hover{
+    background-color: #eac405;
+    cursor: pointer;
 }
 body{
     background-color: #eaeded;

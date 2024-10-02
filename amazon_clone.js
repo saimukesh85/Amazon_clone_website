@@ -90,6 +90,19 @@ export const pro_details2={
     
 
 }
+let b_count=1;
+
+setInterval(()=>{
+    document.querySelector('.bodi').innerHTML=`<img class="add" src="photos/temp${b_count}.jpg">`;
+    if(b_count===7){
+        b_count=1;
+    }
+    else{
+        b_count++;
+    }
+},5000);
+
+
 function printsearch(){
     console.log(document.querySelector(".searchbar").value);
     document.querySelector(".searchbar").value="";
